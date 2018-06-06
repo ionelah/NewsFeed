@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/padding_top">
+
+    <TextView
+        android:id="@+id/name_of_section"
+        style="@style/TextViewStyle"
+        android:text="@string/name_of_section"/>
+
+    <TextView
+        android:id="@+id/data_info"
+        style="@style/DataTextView"
+        android:text="@string/data" />
+
+    <LinearLayout
+        style="@style/LinLayStyle"
+        android:layout_below="@id/name_of_section">
+
+        <TextView
+            android:id="@+id/title_of_article"
+            style="@style/TitleTextView"
+            android:text="@string/title_of_article" />
+
+        <TextView
+            android:id="@+id/time_info"
+            style="@style/TimeTextView"
+            android:text="@string/time" />
+
+    </LinearLayout>
+</RelativeLayout>

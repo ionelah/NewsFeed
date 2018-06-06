@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NewsFeed</string>
+    <string name="name_of_section">name_of_section</string>
+    <string name="title_of_article">title_of_article</string>
+    <string name="data">data</string>
+    <string name="time">time</string>
+    <string name="no_data_to_display">No data to display</string>
+    <string name="no_internet_conection">No internet conection</string>
+</resources>
