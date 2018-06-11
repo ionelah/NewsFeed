@@ -5,14 +5,11 @@ package com.example.android.newsfeed;
  */
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -27,10 +24,9 @@ public class NewsAdapter extends ArrayAdapter<News> {
      * at a given position on a list of news
      */
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View listItemView, ViewGroup parent) {
 
         //check if the existing View is being reused, otherwise inflate the View
-        View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
@@ -40,12 +36,16 @@ public class NewsAdapter extends ArrayAdapter<News> {
 
 
         //find the TextView for the name of section for that article
-        TextView sectionNameTextView = (TextView) listItemView.findViewById(R.id.name_of_section);
+        TextView sectionNameTextView = (TextView) listItemView.findViewById(R.id.name_of_section_text_view);
         //display the current section name for the article
         sectionNameTextView.setText(currentNews.getSectionName());
 
+        //find TextView for the author name and display it for current news
+        TextView authorNameTextView = (TextView) listItemView.findViewById(R.id.author_name_text_view);
+        authorNameTextView.setText(currentNews.getAuthorName());
+
         //find TextView for the title of article
-        TextView titleTextView = (TextView) listItemView.findViewById(R.id.title_of_article);
+        TextView titleTextView = (TextView) listItemView.findViewById(R.id.title_of_article_text_view);
         //display the current title for the article
         titleTextView.setText(currentNews.getTitle());
 
@@ -62,12 +62,12 @@ public class NewsAdapter extends ArrayAdapter<News> {
         }
 
         //find TextView for the data info
-        TextView dataTextView = (TextView) listItemView.findViewById(R.id.data_info);
+        TextView dataTextView = (TextView) listItemView.findViewById(R.id.data_info_text_view);
         //display the current data info for the article
         dataTextView.setText(finalData);
 
         //find TextView for the time info
-        TextView timeTextView = (TextView) listItemView.findViewById(R.id.time_info);
+        TextView timeTextView = (TextView) listItemView.findViewById(R.id.time_info_text_view);
         //display the current time info for the article
         timeTextView.setText(finalTime);
 

@@ -1,32 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingTop="@dimen/padding_top">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LinLayStyle">
+
+   <LinearLayout
+       style="@style/LinLayInsideStyle"
+       android:id="@+id/lin_layout">
 
     <TextView
-        android:id="@+id/name_of_section"
-        style="@style/TextViewStyle"
+        android:id="@+id/name_of_section_text_view"
+        style="@style/TextViewStyle.Section"
         android:text="@string/name_of_section"/>
 
     <TextView
-        android:id="@+id/data_info"
-        style="@style/DataTextView"
+        android:id="@+id/author_name_text_view"
+        style="@style/TextViewStyle"
+        android:text="@string/author_name"/>
+
+    <TextView
+        android:id="@+id/data_info_text_view"
+        style="@style/TextViewStyle.Data"
         android:text="@string/data" />
+   </LinearLayout>
 
     <LinearLayout
-        style="@style/LinLayStyle"
-        android:layout_below="@id/name_of_section">
+        style="@style/LinLayInsideStyle">
 
         <TextView
-            android:id="@+id/title_of_article"
+            android:id="@+id/title_of_article_text_view"
             style="@style/TitleTextView"
             android:text="@string/title_of_article" />
 
         <TextView
-            android:id="@+id/time_info"
+            android:id="@+id/time_info_text_view"
             style="@style/TimeTextView"
             android:text="@string/time" />
 
     </LinearLayout>
-</RelativeLayout>
+</LinearLayout>

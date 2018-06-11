@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">NewsFeed</string>
-    <string name="name_of_section">name_of_section</string>
-    <string name="title_of_article">title_of_article</string>
-    <string name="data">data</string>
-    <string name="time">time</string>
-    <string name="no_data_to_display">No data to display</string>
+    <string name="name_of_section">Name of section</string>
+    <string name="title_of_article">Title of article</string>
+    <string name="data">Data</string>
+    <string name="time">Time</string>
+    <string name="no_data_to_display">Right now there are no articles for your search. Please come back later and try again.</string>
     <string name="no_internet_conection">No internet conection</string>
+    <string name="author_name">Author Name</string>
 </resources>

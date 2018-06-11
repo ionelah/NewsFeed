@@ -17,26 +17,33 @@
         <item name="android:orientation">vertical</item>
     </style>
 
-    <!-- Style for Name of section TextView -->
+    <!-- Style for Linear Layout which contains everything -->
+    <style name="LinLayStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingTop">@dimen/padding_top</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!-- Style for TextView to share the space -->
     <style name="TextViewStyle">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_alignParentLeft">true</item>
-        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
         <item name="android:textSize">@dimen/text_size</item>
+    </style>
+
+    <!-- Style for Section TextView Style -->
+    <style name="TextViewStyle.Section">
         <item name="android:textStyle">bold</item>
     </style>
 
     <!-- Style for Data information TextView -->
-    <style name="DataTextView">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_alignParentTop">true</item>
-        <item name="android:layout_alignParentRight">true</item>
+    <style name="TextViewStyle.Data">
+        <item name="android:gravity">end</item>
     </style>
 
-    <!-- Style for Linear Layout -->
-    <style name="LinLayStyle">
+    <!-- Style for Linear Layout inside the pricipal Linear Layout-->
+    <style name="LinLayInsideStyle">
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:orientation">horizontal</item>
@@ -58,7 +65,7 @@
     </style>
 
     <!-- Style for the Emty TextView -->
-    <style name="EmtyTextView">
+    <style name="EmptyTextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_centerInParent">true</item>

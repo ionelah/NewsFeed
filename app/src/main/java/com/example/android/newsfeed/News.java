@@ -14,12 +14,15 @@ public class News {
     //defaultUrl is the website were we can find the details for that article
     private String defaultUrl;
 
+    private String defaultAuthorName;
+
     //create a new constructor
-    public News(String titleOfArticle, String sectionName, String dataPublished, String url) {
+    public News(String titleOfArticle, String sectionName, String dataPublished, String url, String authorName) {
         defaultTitle = titleOfArticle;
         defaultSection = sectionName;
         defaultData = dataPublished;
         defaultUrl = url;
+        defaultAuthorName = authorName;
     }
 
     //get the title of article
@@ -40,5 +43,10 @@ public class News {
     //get web site for that article
     public String getUrl() {
         return defaultUrl;
+    }
+
+    //get author name for that article
+    public String getAuthorName(){
+        return defaultAuthorName;
     }
 }

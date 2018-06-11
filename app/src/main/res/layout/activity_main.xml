@@ -5,10 +5,11 @@
 
     <ListView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/list"
-        style="@style/ListViewStyle"></ListView>
+        style="@style/ListViewStyle">
+    </ListView>
 
     <TextView
         android:id="@+id/empty_view"
-        style="@style/EmtyTextView" />
+        style="@style/EmptyTextView" />
 
 </RelativeLayout>

@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private static final String LOG_TAG = MainActivity.class.getName();
 
     //Url the query the guardian for books information
-    private static final String guardian_request_url = "https://content.guardianapis.com/search?q=books&api-key=test";
+    private static final String guardian_request_url = "https://content.guardianapis.com/search?q=debates&section=books&show-tags=contributor&api-key=test";
 
     // TextView that is displayed when the list is empty
     private TextView emptyTextView;

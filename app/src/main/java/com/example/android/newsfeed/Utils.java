@@ -168,8 +168,19 @@ public final class Utils {
                 //extract the value for the key word webUrl
                 String webUrl = currentNews.getString("webUrl");
 
+                //extract the author name which is under tags array, key word webTitle
+                JSONArray tagsArray = currentNews.getJSONArray("tags");
+                String authorName = "";
+
+                if (tagsArray.length() > 0) {
+                    for (int j = 0; j < tagsArray.length(); j++) {
+                        JSONObject newObject = tagsArray.getJSONObject(j);
+                        authorName = newObject.getString("webTitle");
+                    }
+                }
+
                 //create a new news object with the title, section name, date and url from Json response
-                News newNews = new News(titleOfArticle, sectionName, datePublished, webUrl);
+                News newNews = new News(titleOfArticle, sectionName, datePublished, webUrl, authorName);
                 news.add(newNews);
             }
         } catch (JSONException e) {
